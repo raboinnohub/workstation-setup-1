@@ -19,11 +19,6 @@ echo
 echo "Installing Homebrew services..."
 brew tap homebrew/services
 
-#Not sure about this: github.com/pivotal/tap does not exist
-#echo
-#echo "Adding Pivotal tap to Homebrew"
-#brew tap pivotal/tap
-
 echo
 echo "Upgrading existing brews..."
 brew upgrade
