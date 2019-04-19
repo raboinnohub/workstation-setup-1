@@ -27,14 +27,13 @@ brew cask install zoomus
 source ${MY_DIR}/scripts/common/git.sh
 
 read -p "Do you want to install cloud foundry tools? [y/n]" yn
-case $yn in
-    [Yy]* ) source ${MY_DIR}/scripts/common/cloud-foundry.sh; break;;
-esac
+if [ $yn == "y" ]; then
+    source ${MY_DIR}/scripts/common/cloud-foundry.sh;
+fi
 
 source ${MY_DIR}/scripts/common/applications-common.sh
 source ${MY_DIR}/scripts/common/unix.sh
 source ${MY_DIR}/scripts/common/configuration-osx.sh
-source ${MY_DIR}/scripts/common/configurations.sh
 
 brew cask install intellij-idea --force # guard against pre-installed intellij
 brew cask install docker
